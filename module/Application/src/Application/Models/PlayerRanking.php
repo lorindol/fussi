@@ -66,9 +66,9 @@ class PlayerRanking
      * 
      * @return void
      */
-    public function addPoints($points)
+    public function addPoints($points, $matches = 1)
     {
-        $this->matches++;
+        $this->matches += $matches;
         $this->score += $points;
     }
 
