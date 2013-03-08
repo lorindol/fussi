@@ -1,6 +1,6 @@
 <?php
     /**
-     * Definition of ApplicationTest\Models\SinglePlayerRankingTest
+     * Definition of ApplicationTest\Model\SinglePlayerRankingTest
      *
      * @copyright Copyright (c) 2013 The Fußi-Team
      * @license   THE BEER-WARE LICENSE (Revision 42)
@@ -11,9 +11,9 @@
      * this stuff is worth it, you can buy us a beer in return.
      */
 
-namespace ApplicationTest\Models;
+namespace ApplicationTest\Model;
 
-use \Application\Models\SinglePlayerRanking;
+use \Application\Model\SinglePlayerRanking;
 use Doctrine\Common\Collections\ArrayCollection;
 
 class SinglePlayerRankingTest extends \PHPUnit_Framework_TestCase

@@ -1,6 +1,6 @@
 <?php
     /**
-     * Definition of Application\Models\Ranking
+     * Definition of Application\Model\Ranking
      *
      * @copyright Copyright (c) 2013 The Fußi-Team
      * @license   THE BEER-WARE LICENSE (Revision 42)
@@ -11,10 +11,10 @@
      * this stuff is worth it, you can buy us a beer in return.
      */
 
-namespace Application\Models;
+namespace Application\Model;
 
-use \Application\Models\PlayerRanking;
-use \Application\Models\Ranking;
+use \Application\Model\PlayerRanking;
+use \Application\Model\Ranking;
 use \Application\Entity\Match;
 
 class SinglePlayerRanking extends Ranking
@@ -25,7 +25,7 @@ class SinglePlayerRanking extends Ranking
     /**
      * @param int $count Number of top scoring players to display
      *
-     * @return \Application\Models\PlayerRanking[]
+     * @return \Application\Model\PlayerRanking[]
      */
     public function getRanking($count = null)
     {
@@ -86,7 +86,7 @@ class SinglePlayerRanking extends Ranking
     /**
      * @param \Application\Entity\Player $player
      *
-     * @return \Application\Models\PlayerRanking
+     * @return \Application\Model\PlayerRanking
      */
     protected function getPlayerRanking($player)
     {

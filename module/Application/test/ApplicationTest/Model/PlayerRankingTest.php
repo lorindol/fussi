@@ -1,6 +1,6 @@
 <?php
 /**
- * Definition of ApplicationTest\Models\PlayerRankingTest
+ * Definition of ApplicationTest\Model\PlayerRankingTest
  *
  * @copyright Copyright (c) 2013 The Fußi-Team
  * @license   THE BEER-WARE LICENSE (Revision 42)
@@ -11,9 +11,9 @@
  * this stuff is worth it, you can buy us a beer in return.
  */
 
-namespace ApplicationTest\Models;
+namespace ApplicationTest\Model;
 
-use \Application\Models\PlayerRanking;
+use \Application\Model\PlayerRanking;
 
 class PlayerRankingTest extends \PHPUnit_Framework_TestCase
 {
