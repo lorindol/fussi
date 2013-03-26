@@ -15,7 +15,7 @@ namespace Application\ViewHelper;
 
 use Application\Entity\MatchRepository;
 use Application\Entity\Tournament;
-use Application\Model\Ranking as RankingCalculator;
+use Application\Model\SinglePlayerRanking as RankingCalculator;
 use Zend\View\Helper\AbstractHelper;
 
 class Ranking extends AbstractHelper
@@ -41,11 +41,11 @@ class Ranking extends AbstractHelper
      * @return string
      */
     public function __invoke(
-	Tournament $tournament,
-	$potential,
-	$year,
-	$month,
-	$count = 0
+        Tournament $tournament,
+        $potential,
+        $year,
+        $month,
+        $count = 0
     )
     {
         $matches = $this->matchRepository->findForMonth(

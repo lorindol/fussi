@@ -15,7 +15,7 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 
-use \Application\Model\Ranking;
+use \Application\Model\SinglePlayerRanking;
 use \Application\Entity\TournamentRepository;
 use \Application\Entity\Tournament;
 
@@ -70,7 +70,7 @@ class IndexController extends AbstractActionController
             return;
         }
 
-	/** @var $matchRepository \Application\Entity\MatchRepository */
+        /** @var $matchRepository \Application\Entity\MatchRepository */
         $matchRepository = $this->em->getRepository('Application\Entity\Match');
         $matches = $matchRepository->findForMonth($tournament, $year, $month);
 
@@ -81,7 +81,12 @@ class IndexController extends AbstractActionController
             $players = $activePlayers;
         }
 
-        $ranking = new Ranking($matches);
+        if ($tournament->isSinglePlayer()) {
+            $ranking = new SinglePlayerRanking($matches);
+        } else {
+            // TODO: Multiplayer ranking class
+            $ranking = null;
+        }
 
         return array(
             'date'           => $date,

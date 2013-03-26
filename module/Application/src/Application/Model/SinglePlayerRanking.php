@@ -97,4 +97,8 @@ class SinglePlayerRanking extends Ranking
 
         return $this->ranking[$player->getId()];
     }
+
+    public function getPotential() {
+        return 0;
+    }
 }
